@@ -5,11 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './enter-bets.component.html',
   styleUrls: ['./enter-bets.component.scss']
 })
-export class EnterBetsComponent implements OnInit {
+export class EnterBetsComponent {
 
-  constructor() { }
+  enterBetForm = {
+    firstTeamName: undefined,
+    secondTeamName: undefined,
+    overUnderText: undefined,
+    betAmount: undefined,
+    additionalNotes: undefined
+  };
 
-  ngOnInit(): void {
-  }
+     onClick(){
+     console.log(this.enterBetForm);
+
+   }
 
 }
