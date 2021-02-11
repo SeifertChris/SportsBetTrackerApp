@@ -9,7 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StatsCardComponent } from './dashboard/stats-card/stats-card.component';
-import { EnterBetsComponent } from './enter-bets/enter-bets.component'
+import { EnterBetsComponent } from './enter-bets/enter-bets.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { EnterBetsComponent } from './enter-bets/enter-bets.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
