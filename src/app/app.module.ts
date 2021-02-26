@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { StatsCardComponent } from './dashboard/stats-card/stats-card.component';
 import { EnterBetsComponent } from './enter-bets/enter-bets.component';
 import { FormsModule } from '@angular/forms';
+import { BetsLastWeekTableComponent } from './dashboard/bets-last-week-table/bets-last-week-table.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     ProfileComponent,
     StatsCardComponent,
-    EnterBetsComponent
+    EnterBetsComponent,
+    BetsLastWeekTableComponent
   ],
   imports: [
     BrowserModule,
