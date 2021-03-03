@@ -1,34 +1,28 @@
-<div class="row mt-4">
-  <mdb-card class="mb-4 wow fadeIn">
-    <mdb-card-body class>
-      <div class="table-responsive-sm">
-        <table class="table table-striped w-auto">
-          <thead>
-            <tr>
-              <th scope="col">Team</th>
-              <th scope="col">VS</th>
-              <th scope="col">Team</th>
-              <!-- <th scope="col">Over/Under</th> -->
-              <th scope="col">Amount</th>
-              <th scope="col">Won</th>
-              <th scope="col">Lost</th>
-              <!-- <th scope="col">Notes</th> -->
-            </tr>
-          </thead>
-          <tbody>
-           <tr *ngFor="let bets of lastWeekBets">
-             <td>{{bets.teamOne}}</td>
-             <td>vs</td>
-             <td>{{bets.teamTwo}}</td>
-             <!-- <td>{{bets.overUnder}}</td> -->
-             <td>{{bets.amount}}</td>
-             <td>{{bets.won}}</td>
-             <td>{{bets.lost}}</td>
-             <!-- <td>{{bets.additionalNotes}}</td> -->
-           </tr>
-          </tbody>
-        </table>
-      </div>
-    </mdb-card-body>
-  </mdb-card>
+<div class="container">
+  <div *ngFor="let bets of lastWeekBets" class="row mt-4">
+    <mdb-card class="mb-4 wow fadeIn widthContainer100">
+      <mdb-card-body>
+        <div class="p-2" [ngClass]="{'lastWeekBetsWinner': bets.won, 'lastWeekBetsLoser':bets.lost}">
+          <mdb-card-title>
+            <h5 class="card-title text-white">{{bets.teamOne}} vs {{bets.teamTwo}}</h5>
+          </mdb-card-title>
+        </div>
+        <hr>
+        <mdb-card-text>
+          <div>
+            <h6>Amount: ${{bets.amount}}</h6>
+          </div>
+          <div>
+            <h6>Over/Under: {{bets.overUnder}}</h6>
+          </div>
+          <div>
+            <h6>Date or Date Rang: Sunday: 02/16/2021</h6>
+          </div>
+          <div>
+            <h6>Notes: {{bets.additionalNotes}}</h6>
+          </div>
+        </mdb-card-text>
+      </mdb-card-body>
+    </mdb-card>
+  </div>
 </div>
