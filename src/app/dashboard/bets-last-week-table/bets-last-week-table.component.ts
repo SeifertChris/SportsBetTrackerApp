@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BetsLastWeekTableComponent {
 
-lastWeekBetsTableShowHide = false;
+// lastWeekBetsBtnToggle: boolean;
 lastWeekBets =[
     {
       "teamOne":"Eagles",
@@ -37,6 +37,11 @@ lastWeekBets =[
       "additionalNotes":"More notes about the falcons and the fact that they suck balls and then something else happened I am just trying to get a long message to print on the screen"
     }
   ];
+
+  // receiveLastWeekBetClick($event){
+  //   this.lastWeekBetsBtnToggle = $event
+  //   console.log(this.lastWeekBetsBtnToggle);
+  // }
 
 // //this is going to be in its own service. It needs to be decoupled from this component for testing and best practices
 // getLastWeekBetsFromDB(){

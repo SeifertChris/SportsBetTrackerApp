@@ -1,19 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-stats-card',
   templateUrl: './stats-card.component.html',
   styleUrls: ['./stats-card.component.scss']
 })
-export class StatsCardComponent implements OnInit {
-  message = 'hello world'
-  constructor() { }
+export class StatsCardComponent {
+  lastWeekBetsBtnToggle: boolean = false;
 
-  ngOnInit(): void {
-  }
+  @Output() lastWeekBetsClick = new EventEmitter<boolean>();
 
-  betsLastWeekClick(){
-    console.log(this.message);
+  constructor() {}
+
+  buttonClick(){
+    this.lastWeekBetsBtnToggle = !this.lastWeekBetsBtnToggle;
+    this.lastWeekBetsClick.emit(this.lastWeekBetsBtnToggle);
+    console.log(this.lastWeekBetsBtnToggle)
   }
 
 }
