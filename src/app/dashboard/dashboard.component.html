@@ -22,6 +22,6 @@
 <!-- Heading -->
 
 <!--Stats Cards-->
-<app-stats-card></app-stats-card>
+<app-stats-card (lastWeekBetsClick)="receiveLastWeekBetClick($event)"></app-stats-card>
 <!--Last Weeks Bets-->
-<app-bets-last-week-table></app-bets-last-week-table>
+<app-bets-last-week-table *ngIf="lastWeekBetsBtnToggle"></app-bets-last-week-table>

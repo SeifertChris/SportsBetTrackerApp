@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   }
 
   receiveLastWeekBetClick($event){
-    this.lastWeekBetsBtnToggle = $event
+    this.lastWeekBetsBtnToggle = $event;
     console.log(this.lastWeekBetsBtnToggle);
   }
 
