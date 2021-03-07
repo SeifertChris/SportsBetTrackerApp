@@ -1,3 +1,4 @@
+import { AboutComponent } from './navigation/about/about.component';
 import { EnterBetsComponent } from './enter-bets/enter-bets.component';
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,6 +9,7 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'enterbets', component: EnterBetsComponent},
+  {path: 'about', component: AboutComponent},
   {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
 ];
 
