@@ -9,6 +9,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class StatsCardComponent {
   lastWeekBetsBtnToggle: boolean = false;
 
+
   @Output() lastWeekBetsClick = new EventEmitter<boolean>();
 
   constructor() {}
@@ -16,7 +17,7 @@ export class StatsCardComponent {
   buttonClick(){
     this.lastWeekBetsBtnToggle = !this.lastWeekBetsBtnToggle;
     this.lastWeekBetsClick.emit(this.lastWeekBetsBtnToggle);
-    console.log(this.lastWeekBetsBtnToggle)
   }
+
 
 }
