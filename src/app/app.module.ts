@@ -1,3 +1,4 @@
+import { LastWeekBetsService } from './services/last-week-bets.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -32,7 +33,9 @@ import { AboutComponent } from './navigation/about/about.component';
     FormsModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    LastWeekBetsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
