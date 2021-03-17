@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'enterbets', component: EnterBetsComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'signin',component: SignInComponent},
+  {path: 'signin', component: SignInComponent},
   {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
 ];
 
