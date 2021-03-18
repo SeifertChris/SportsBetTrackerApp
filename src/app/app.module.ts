@@ -14,6 +14,7 @@ import { EnterBetsComponent } from './enter-bets/enter-bets.component';
 import { FormsModule } from '@angular/forms';
 import { BetsLastWeekTableComponent } from './dashboard/bets-last-week-table/bets-last-week-table.component';
 import { AboutComponent } from './navigation/about/about.component';
+import { SignInComponent } from './navigation/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AboutComponent } from './navigation/about/about.component';
     StatsCardComponent,
     EnterBetsComponent,
     BetsLastWeekTableComponent,
-    AboutComponent
+    AboutComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
