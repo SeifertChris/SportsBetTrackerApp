@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   lastWeekBetsBtnToggle: boolean;
+  lastWeekProfitsBtnToggle: boolean;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +16,10 @@ export class DashboardComponent implements OnInit {
 
   receiveLastWeekBetClick($event){
     this.lastWeekBetsBtnToggle = $event;
+  }
+
+  receiveLastWeekProfitsClick($event){
+    this.lastWeekProfitsBtnToggle = $event;
   }
 
 
