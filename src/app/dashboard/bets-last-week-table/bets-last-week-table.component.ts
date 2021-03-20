@@ -1,5 +1,5 @@
 import { LastWeekBetsService } from './../../services/last-week-bets.service';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component} from '@angular/core';
 
 @Component({
   selector: 'app-bets-last-week-table',

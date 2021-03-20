@@ -1,3 +1,5 @@
+import { BetsLastWeekProfitsComponent } from './dashboard/bets-last-week-profits/bets-last-week-profits.component';
+import { LastWeekProfitsService } from './services/last-week-profits.service';
 import { LastWeekBetsService } from './services/last-week-bets.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -26,6 +28,7 @@ import { SignInComponent } from './navigation/sign-in/sign-in.component';
     StatsCardComponent,
     EnterBetsComponent,
     BetsLastWeekTableComponent,
+    BetsLastWeekProfitsComponent,
     AboutComponent,
     SignInComponent
   ],
@@ -36,7 +39,8 @@ import { SignInComponent } from './navigation/sign-in/sign-in.component';
     MDBBootstrapModule.forRoot()
   ],
   providers: [
-    LastWeekBetsService
+    LastWeekBetsService,
+    LastWeekProfitsService
   ],
   bootstrap: [AppComponent]
 })
