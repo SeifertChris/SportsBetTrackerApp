@@ -1,10 +1,15 @@
-<app-navigation></app-navigation>
-<!-- <main [ngClass]="{'py-0 px-0 my-0 mx-0': specialPage}"  class="mx-lg-5" > -->
-<main class="mx-lg-5" >
+<amplify-authenticator *ngIf="authState !== 'signedin'"></amplify-authenticator>
 
-  <div class="mt-5">
-    <router-outlet></router-outlet>
-  </div>
-</main>
+<div *ngIf="authState === 'signedin' && user" class="App">
+    <!-- <div class="whiteFont">Hello, {{user.username}}</div> -->
+    <app-navigation [username]="user.username"></app-navigation>
+    <!-- <main [ngClass]="{'py-0 px-0 my-0 mx-0': specialPage}"  class="mx-lg-5" > -->
+    <main class="mx-lg-5" >
+      <div class="mt-5">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
 
-<app-footer></app-footer>
+    <app-footer></app-footer>
+
+</div>

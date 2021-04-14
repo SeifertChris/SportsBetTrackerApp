@@ -24,6 +24,7 @@
 
     </div>
 
+
   </div>
   <!-- Sidebar -->
 
@@ -53,15 +54,10 @@
               <li class="nav-item">
                   <a class="nav-link" href="" mdbWavesEffect>How To Use</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="" mdbWavesEffect>Register</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="signin" mdbWavesEffect>Sign In</a>
-              </li>
 
-          <!--Dropdown-->
-           <!-- Dropdown -->
+
+
+               <!-- Dropdown -->
               <li class="nav-item dropdown" dropdown>
                 <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
                   Actions<span class="caret"></span></a>
@@ -75,6 +71,10 @@
               </li>
 
             </ul>
+            <div class="blue-text margin20px">Welcome, {{username}}</div>
+            <div>
+              <amplify-sign-out></amplify-sign-out>
+            </div>
           <!-- Links -->
 
           <!-- Search form -->
