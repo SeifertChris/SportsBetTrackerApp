@@ -1,3 +1,4 @@
+import { AuthenticationInfoService } from './services/authentication-info.service';
 import { BetsLastWeekProfitsComponent } from './dashboard/bets-last-week-profits/bets-last-week-profits.component';
 import { LastWeekProfitsService } from './services/last-week-profits.service';
 import { LastWeekBetsService } from './services/last-week-bets.service';
@@ -6,7 +7,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -16,7 +17,11 @@ import { EnterBetsComponent } from './enter-bets/enter-bets.component';
 import { FormsModule } from '@angular/forms';
 import { BetsLastWeekTableComponent } from './dashboard/bets-last-week-table/bets-last-week-table.component';
 import { AboutComponent } from './navigation/about/about.component';
-import { SignInComponent } from './navigation/sign-in/sign-in.component';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import Amplify from "aws-amplify";
+import awsconfig from "../aws-exports";
+
+Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [
@@ -29,18 +34,19 @@ import { SignInComponent } from './navigation/sign-in/sign-in.component';
     EnterBetsComponent,
     BetsLastWeekTableComponent,
     BetsLastWeekProfitsComponent,
-    AboutComponent,
-    SignInComponent
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AmplifyUIAngularModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [
     LastWeekBetsService,
-    LastWeekProfitsService
+    LastWeekProfitsService,
+    AuthenticationInfoService
   ],
   bootstrap: [AppComponent]
 })
