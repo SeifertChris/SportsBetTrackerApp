@@ -20,6 +20,7 @@ import { AboutComponent } from './navigation/about/about.component';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import Amplify from "aws-amplify";
 import awsconfig from "../aws-exports";
+import { HowToComponent } from './navigation/how-to/how-to.component';
 
 Amplify.configure(awsconfig);
 
@@ -34,7 +35,8 @@ Amplify.configure(awsconfig);
     EnterBetsComponent,
     BetsLastWeekTableComponent,
     BetsLastWeekProfitsComponent,
-    AboutComponent
+    AboutComponent,
+    HowToComponent
   ],
   imports: [
     BrowserModule,
