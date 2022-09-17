@@ -1,4 +1,3 @@
-import { AuthenticationInfoService } from './services/authentication-info.service';
 import { BetsLastWeekProfitsComponent } from './dashboard/bets-last-week-profits/bets-last-week-profits.component';
 import { LastWeekProfitsService } from './services/last-week-profits.service';
 import { LastWeekBetsService } from './services/last-week-bets.service';
@@ -17,12 +16,9 @@ import { EnterBetsComponent } from './enter-bets/enter-bets.component';
 import { FormsModule } from '@angular/forms';
 import { BetsLastWeekTableComponent } from './dashboard/bets-last-week-table/bets-last-week-table.component';
 import { AboutComponent } from './navigation/about/about.component';
-import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
-import Amplify from "aws-amplify";
-import awsconfig from "../aws-exports";
 import { HowToComponent } from './navigation/how-to/how-to.component';
 
-Amplify.configure(awsconfig);
+
 
 @NgModule({
   declarations: [
@@ -42,13 +38,11 @@ Amplify.configure(awsconfig);
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AmplifyUIAngularModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [
     LastWeekBetsService,
     LastWeekProfitsService,
-    AuthenticationInfoService
   ],
   bootstrap: [AppComponent]
 })
