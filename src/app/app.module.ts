@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { BetsLastWeekTableComponent } from './dashboard/bets-last-week-table/bets-last-week-table.component';
 import { AboutComponent } from './navigation/about/about.component';
 import { HowToComponent } from './navigation/how-to/how-to.component';
+import { StatisticsComponent } from './navigation/statistics/statistics.component';
 
 
 
@@ -32,7 +33,8 @@ import { HowToComponent } from './navigation/how-to/how-to.component';
     BetsLastWeekTableComponent,
     BetsLastWeekProfitsComponent,
     AboutComponent,
-    HowToComponent
+    HowToComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
