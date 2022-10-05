@@ -1,81 +1,95 @@
 <!--Main Navigation-->
 <header>
 
-  <!-- Sidebar -->
-  <div class="sidebar-fixed position-fixed">
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
 
-    <a class="logo-wrapper waves-effect">
-        <img src="../../../assets/chris-sean.jpg" class="img-thumbnail" alt="Profile Image">
-    </a>
-
-    <div class="list-group list-group-flush">
-
-        <a routerLink="dashboard" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-            <mdb-icon fas icon="chart-pie" class="mr-3"></mdb-icon>Dashboard
+        <a class="logo-wrapper waves-effect">
+            <img src="../../../assets/chris-sean.jpg" class="img-thumbnail" alt="Profile Image">
         </a>
-        <a routerLink="profile" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-            <mdb-icon fas icon="user" class="mr-3"></mdb-icon>Profile</a>
-        <a routerLink="enterbets" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-            <mdb-icon fas icon="table" class="mr-3"></mdb-icon>Enter Bets</a>
-        <a routerLink="maps/map1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-            <mdb-icon far icon="map" class="mr-3"></mdb-icon>View Bet History</a>
-        <a routerLink="nonExistingPath" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-            <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>Graphs</a>
+
+        <div class="list-group list-group-flush">
+
+            <a routerLink="dashboard" routerLinkActive="active"
+                class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="chart-pie" class="mr-3"></mdb-icon>Dashboard
+            </a>
+            <a routerLink="profile" routerLinkActive="active"
+                class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="user" class="mr-3"></mdb-icon>Profile
+            </a>
+            <a routerLink="enterbets" routerLinkActive="active"
+                class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="table" class="mr-3"></mdb-icon>Enter Bets
+            </a>
+            <a routerLink="maps/map1" routerLinkActive="active"
+                class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon far icon="map" class="mr-3"></mdb-icon>View Bet History
+            </a>
+            <a routerLink="statistics" routerLinkActive="active"
+                class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon far icon="map" class="mr-3"></mdb-icon>Statistics
+            </a>
+            <a routerLink="nonExistingPath" routerLinkActive="active"
+                class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>Graphs
+            </a>
+
+        </div>
+
 
     </div>
+    <!-- Sidebar -->
 
+    <!--Navbar-->
+    <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg navbar-light white">
 
-  </div>
-  <!-- Sidebar -->
+        <!-- Navbar brand -->
+        <logo class="ml-3">
+            <a class="navbar-brand" href="">
+                <strong class="blue-text">Sports Bet Tracker</strong>
+            </a>
+        </logo>
 
-  <!--Navbar-->
-  <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg navbar-light white">
+        <!-- Collapsible content -->
+        <links>
 
-      <!-- Navbar brand -->
-      <logo class="ml-3">
-          <a class="navbar-brand" href="">
-              <strong class="blue-text">Sports Bet Tracker</strong>
-          </a>
-      </logo>
-
-      <!-- Collapsible content -->
-      <links>
-
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="dashboard" mdbWavesEffect>Home
-                      <span class="sr-only">(current)</span>
-                  </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="about" mdbWavesEffect>About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="howto" mdbWavesEffect>How To Use</a>
-            </li>
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="dashboard" mdbWavesEffect>Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="about" mdbWavesEffect>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="howto" mdbWavesEffect>How To Use</a>
+                </li>
 
 
 
 
-               <!-- Dropdown -->
-              <li class="nav-item dropdown" dropdown>
-                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-                  Actions<span class="caret"></span></a>
-                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-                  <a class="dropdown-item waves-light" mdbWavesEffect routerLink="dashboard">Dashboard</a>
-                  <a class="dropdown-item waves-light" mdbWavesEffect routerLink="profile">Profile</a>
-                  <a class="dropdown-item waves-light" mdbWavesEffect routerLink="enterbets">Enter Bets</a>
-                  <a class="dropdown-item waves-light" mdbWavesEffect routerLink="#">View Bet History</a>
-                  <a class="dropdown-item waves-light" mdbWavesEffect routerLink="#">Graphs</a>
-                </div>
-              </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown" dropdown>
+                    <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+                        mdbWavesEffect>
+                        Actions<span class="caret"></span></a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="dashboard">Dashboard</a>
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="profile">Profile</a>
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="enterbets">Enter Bets</a>
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="#">View Bet History</a>
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="#">Graphs</a>
+                    </div>
+                </li>
 
             </ul>
-          <!-- Links -->
+            <!-- Links -->
 
-          <!-- Search form -->
-          <!-- <ul class="navbar-nav nav-flex-icons">
+            <!-- Search form -->
+            <!-- <ul class="navbar-nav nav-flex-icons">
 
                   <li class="nav-item">
                       <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank" mdbWavesEffect>
@@ -98,11 +112,11 @@
                           <mdb-icon far icon="gem" class=" left"></mdb-icon> Go Pro</a>
                   </li>
               </ul> -->
-      </links>
-      <!-- Collapsible content -->
+        </links>
+        <!-- Collapsible content -->
 
-  </mdb-navbar>
-  <!--/.Navbar-->
+    </mdb-navbar>
+    <!--/.Navbar-->
 
 </header>
 <!--Main Navigation-->
