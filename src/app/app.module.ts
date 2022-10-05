@@ -18,6 +18,7 @@ import { BetsLastWeekTableComponent } from './dashboard/bets-last-week-table/bet
 import { AboutComponent } from './navigation/about/about.component';
 import { HowToComponent } from './navigation/how-to/how-to.component';
 import { StatisticsComponent } from './navigation/statistics/statistics.component';
+import { StatsChartComponent } from './navigation/statistics/stats-chart/stats-chart.component';
 
 
 
@@ -34,7 +35,8 @@ import { StatisticsComponent } from './navigation/statistics/statistics.componen
     BetsLastWeekProfitsComponent,
     AboutComponent,
     HowToComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    StatsChartComponent
   ],
   imports: [
     BrowserModule,
