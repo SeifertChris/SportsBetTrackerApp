@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
+import { StatsChartService } from 'src/app/services/stats-chart.service';
 
 @Component({
   selector: 'app-stats-chart',
@@ -8,17 +9,23 @@ import { Chart } from 'chart.js';
 })
 export class StatsChartComponent implements OnInit {
   public chart: any;
+  teams;
+
+  constructor(service: StatsChartService) {
+    this.teams = service.getTeams();
+  }
+
   createChart() {
     this.chart = new Chart("MyChart", {
       type: 'bar',
 
       data: {
-        labels: ['2022-05-10', '2022-05-11', '2022-05-12'],
+        labels: this.teams,
         datasets: [
           {
-            label: "Sales",
-            data: [467, 576, 572],
-            backgroundColor: 'blue',
+            label: "Over/Under",
+            data: [6, -6, 3, -3, 3],
+            backgroundColor: 'lightgreen',
             barThickness: 6,
             maxBarThickness: 8
           }
@@ -36,8 +43,11 @@ export class StatsChartComponent implements OnInit {
           yAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Score'
-            }
+              labelString: 'Over/Under'
+            },
+            ticks: {
+              suggestedMin: -10,
+            },
           }]
         }
       }

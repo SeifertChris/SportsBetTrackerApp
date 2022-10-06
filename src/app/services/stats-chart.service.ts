@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class StatsChartService {
 
-  constructor() { }
+  getTeams() {
+    return ['Eagles vs Dallas', 'GreenBay vs SanFrancisco', 'Carolina vs Falcons', 'Patriots vs Browns', 'Dolphins vs Bengals'];
+  }
 }
