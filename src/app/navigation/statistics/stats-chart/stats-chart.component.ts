@@ -10,9 +10,11 @@ import { StatsChartService } from 'src/app/services/stats-chart.service';
 export class StatsChartComponent implements OnInit {
   public chart: any;
   teams;
+  overUnder;
 
   constructor(service: StatsChartService) {
     this.teams = service.getTeams();
+    this.overUnder = service.getOverUnder();
   }
 
   createChart() {
@@ -24,7 +26,7 @@ export class StatsChartComponent implements OnInit {
         datasets: [
           {
             label: "Over/Under",
-            data: [6, -6, 3, -3, 3],
+            data: this.overUnder,
             backgroundColor: 'lightgreen',
             barThickness: 6,
             maxBarThickness: 8
