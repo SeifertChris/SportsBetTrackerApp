@@ -19,6 +19,7 @@ import { AboutComponent } from './navigation/about/about.component';
 import { HowToComponent } from './navigation/how-to/how-to.component';
 import { StatisticsComponent } from './navigation/statistics/statistics.component';
 import { StatsChartComponent } from './navigation/statistics/stats-chart/stats-chart.component';
+import { StatsChartService } from './services/stats-chart.service';
 
 
 
@@ -47,6 +48,7 @@ import { StatsChartComponent } from './navigation/statistics/stats-chart/stats-c
   providers: [
     LastWeekBetsService,
     LastWeekProfitsService,
+    StatsChartService
   ],
   bootstrap: [AppComponent]
 })
