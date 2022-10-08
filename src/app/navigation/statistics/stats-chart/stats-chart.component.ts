@@ -35,21 +35,39 @@ export class StatsChartComponent implements OnInit {
       },
       options: {
         aspectRatio: 3,
+        legend: {
+          labels: {
+            fontColor: 'white'
+          }
+        },
         scales: {
           xAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Teams'
+              labelString: 'Teams',
+              fontColor: 'white'
+            },
+            ticks: {
+              fontColor: 'white'
+            },
+            gridLines: {
+              color: 'gray'
             }
           }],
           yAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Over/Under'
+              labelString: 'Over/Under',
+              fontColor: 'white'
             },
             ticks: {
               suggestedMin: -10,
+              fontColor: 'white'
             },
+            gridLines: {
+              color: 'gray',
+              zeroLineColor: 'gray'
+            }
           }]
         }
       }
